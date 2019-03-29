@@ -1,0 +1,21 @@
+<h4 class="text-center font-weight-bold">ตะกร้าสินค้า</h4>
+<table class="table">
+  <thead>
+    <tr>
+        <th>รหัสสินค้า</th>
+        <th>ชื่อสินค้า</th>
+        <th>ราคา</th>
+        <th>จำนวนที่เลือก</th>
+        <th>รวม</th>
+    </tr>
+  </thead>
+    <tbody>
+    <tr *ngFor="let item of cartList">
+        <td>{{item.productId}}</td>
+        <td>{{item.productName}}</td>
+        <td>{{item.productCost}}</td>
+        <td>{{item.qty}}</td>
+        <th>{{item.productCost*item.qty}}</th>
+    </tr>
+  </tbody>
+</table>
